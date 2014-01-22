@@ -6,6 +6,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import com.aerospike.client.Record;
+import com.aerospike.client.query.ResultSet;
 
 /**
  * JSONRecord is used to convert an Aerospike Record
@@ -28,4 +29,5 @@ public class JSONRecord extends JSONObject {
 			put("duplicates", duplicates);
 		}
 	}
+
 }

@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class FilghtsUploader {
 
-	private static final String TEST_FILE = "flights_from.csv";
+	private static final String TEST_FILE = "src/test/resources/flights_from.csv";
 
 	@Before
 	public void setUp() throws Exception {

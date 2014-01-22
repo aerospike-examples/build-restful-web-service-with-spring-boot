@@ -1,10 +1,10 @@
-Building a RESTful Web Service with Spring Boot to access data in an Aerospike cluster
+#Building a RESTful Web Service with Spring Boot to access data in an Aerospike cluster
 ==========================================
 Spring Boot is a powerful jump start into Spring. It allows you to build powerful applications with production grade services with little effort on your part. 
 
 Aerospike is a high available, low latency NoSQL data base that scales linearly. It is an in-memory database optimized to use both DRAM and native Flash. Aerospike boasts latencies of 1 to 3 ms consistently across throughput loads on a correctly sized cluster. Aerospike also has high reliability and is ACID compliant.  Their oldest customer has many terabytes of data and has never been offline, even during Hurricane Sandy in New York City.
 
-What you will build
+##What you will build
 This guide will take you through creating a simple RESTful web service with Spring Boot. You will build a service that accepts an HTTP GET request:
 
     http://localhost:8080/as/test/flights/getAll/1234
