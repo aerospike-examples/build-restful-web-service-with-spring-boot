@@ -23,7 +23,7 @@ import com.aerospike.client.AerospikeException;
 @ComponentScan
 public class AerospikeRESTfulService {
 	
-	@Bean
+	@Bean(destroyMethod="close")
 	public AerospikeClient asClient() throws AerospikeException {
 		Properties as = System.getProperties();
 		return new AerospikeClient(as.getProperty("seedHost"), Integer.parseInt(as.getProperty("port")));
