@@ -42,6 +42,7 @@ import com.aerospike.client.policy.QueryPolicy;
 import com.aerospike.client.policy.WritePolicy;
 import com.aerospike.client.query.Filter;
 import com.aerospike.client.query.IndexType;
+import com.aerospike.client.query.KeyRecord;
 import com.aerospike.client.query.ResultSet;
 import com.aerospike.client.query.Statement;
 import com.aerospike.client.task.IndexTask;
@@ -69,10 +70,11 @@ public class RESTController {
 	public @ResponseBody JSONRecord getAll(@PathVariable("namespace") String namespace, @PathVariable("set") String set, @PathVariable("key") String keyvalue) throws Exception {
 
 		Policy policy = new Policy();
-		Key key = new Key(namespace, set, keyvalue);
-		Record result = client.get(policy, key);
+		Key key = new Key(namespace, set, Value.get(keyvalue));
+		Record record = client.get(policy, key);
+		KeyRecord result = new KeyRecord(key, record);
 
-		return new JSONRecord(result);
+		return new JSONRecord(record);
 	}
 	/**
 	 * Query and filter by airport date and time
