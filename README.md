@@ -1,4 +1,11 @@
-#Building a RESTful Web Service with Spring Boot to access data in an Aerospike cluster
+This code is now obsolete
+=========================
+Welcome to 2019! This code acompanied a blog post from 2013. A lot has changed in Aerospike since then.
+Please familiarize yourself with one modern approach to creating RESTful web services - the new [REST client](https://www.aerospike.com/docs/client/rest/index.html).
+
+See [aerospike-examples/rest-client-usage](https://github.com/aerospike-examples/rest-client-usage).
+
+Building a RESTful Web Service with Spring Boot to access data in an Aerospike cluster
 ==========================================
 Spring Boot is a powerful jump start into Spring. It allows you to build powerful applications with production grade services with little effort on your part. 
 
